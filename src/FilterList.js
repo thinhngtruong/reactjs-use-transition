@@ -8,7 +8,7 @@ export function FilterList({ names }) {
 
   const changeHandler = ({ target: { value } }) => {
     setQuery(value);
-    setHighlight(value);
+    startTransition(() => setHighlight(value));
   };
 
   return (
